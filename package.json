@@ -1,6 +1,6 @@
 {
   "name": "is-monorepo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Check if the working directory is in a monorepo.",
   "license": "MIT",
   "private": false,
