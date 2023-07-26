@@ -18,11 +18,11 @@ function isStringArray(value: JSONValue): value is string[] {
 }
 
 function getWorkspacesFromJSON(pkgJSON: JSONValue | undefined): string[] | undefined {
-  if(pkgJSON && isJSONObject(pkgJSON) && "workspace" in pkgJSON && pkgJSON.workspace) {
-    if(isStringArray(pkgJSON.workspace)) {
-      return pkgJSON.workspace;
-    } else if(isJSONObject(pkgJSON.workspace) && "packages" in pkgJSON.workspace && pkgJSON.workspace.packages && isStringArray(pkgJSON.workspace.packages)) {
-      return pkgJSON.workspace.packages;
+  if(pkgJSON && isJSONObject(pkgJSON) && "workspaces" in pkgJSON && pkgJSON.workspaces) {
+    if(isStringArray(pkgJSON.workspaces)) {
+      return pkgJSON.workspaces;
+    } else if(isJSONObject(pkgJSON.workspaces) && "packages" in pkgJSON.workspaces && pkgJSON.workspaces.packages && isStringArray(pkgJSON.workspaces.packages)) {
+      return pkgJSON.workspaces.packages;
     }
   }
   return undefined;
